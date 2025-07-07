@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { CatalogoProductosComponent } from './components/catalogo-productos/catalogo-productos.component';
 import { GestionProductosComponent } from './components/gestion-productos/gestion-productos.component';
+import { CommonModule } from '@angular/common';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { GestionProductosComponent } from './components/gestion-productos/gestio
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
