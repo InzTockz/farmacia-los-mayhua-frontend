@@ -8,13 +8,17 @@ import { CatalogoProductosComponent } from './components/catalogo-productos/cata
 import { GestionProductosComponent } from './components/gestion-productos/gestion-productos.component';
 import { CommonModule } from '@angular/common';
 import { provideHttpClient } from '@angular/common/http';
+import { RegistroProductoComponent } from './components/registro-producto/registro-producto.component';
+import { ActualizarProductoComponent } from './components/actualizar-producto/actualizar-producto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CatalogoProductosComponent,
-    GestionProductosComponent
+    GestionProductosComponent,
+    RegistroProductoComponent,
+    ActualizarProductoComponent
   ],
   imports: [
     BrowserModule,
