@@ -1,34 +1,37 @@
 <div>
+    <form (ngSubmit)="registrarProducto()">
     <div>
         <label>Nombre del Producto</label>
-        <input type="text">
+        <input name="nombreProducto" type="text" [(ngModel)]="producto.nombreProducto">
     </div>
     <div>
         <label>Fecha de Fabricacion</label>
-        <input type="date">
+        <input name="fechaFabricacion" type="date" [(ngModel)]="producto.fechaFabricacion">
     </div>
     <div>
         <label>Fecha de Vencimiento</label>
-        <input type="date">
+        <input name="fechaVencimiento" type="date" [(ngModel)]="producto.fechaVencimiento">
     </div>
     <div>
         <label>Stock</label>
-        <input type="number">
+        <input name="stock" type="number" [(ngModel)]="producto.stock">
     </div>
     <div>
         <label>Precio</label>
-        <input type="number">
+        <input name="precio" type="number" [(ngModel)]="producto.precio">
     </div>
     <div>
         <label>Categoria</label>
-        <input type="number">
+        <input name="idCategoria" type="number" [(ngModel)]="producto.idCategoria">
     </div>
     <div>
         <label>Clasificacion del Producto</label>
-        <input type="number">
+        <input name="idClasificacion" type="number" [(ngModel)]="producto.idClasificacion">
     </div>
     <div>
         <label>Imagen</label>
-        <input type="file">
+        <input name="imagen" type="file" [(ngModel)]="imagen">
     </div>
+    <button >Registrar Producto</button>
+    </form>
 </div>

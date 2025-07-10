@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { provideHttpClient } from '@angular/common/http';
 import { RegistroProductoComponent } from './components/registro-producto/registro-producto.component';
 import { ActualizarProductoComponent } from './components/actualizar-producto/actualizar-producto.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ActualizarProductoComponent } from './components/actualizar-producto/ac
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]
