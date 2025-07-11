@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  cambiarPestana:boolean = true;
+
+  constructor(){}
+
+  ngOnInit():void{
+
+  }
+
+  cambiarEstado(estado:boolean):void{
+    this.cambiarPestana = estado;
+  }
 }

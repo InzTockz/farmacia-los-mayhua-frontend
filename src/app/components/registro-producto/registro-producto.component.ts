@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Producto } from '../../model/producto';
 import { ProductoService } from '../../service/producto.service';
 import { ProductoRequest } from '../../model/producto-request';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro-producto',
@@ -14,7 +15,7 @@ export class RegistroProductoComponent implements OnInit {
   producto:ProductoRequest = new ProductoRequest();
   imagen!:File;
 
-  constructor(private productoService:ProductoService){}
+  constructor(private productoService:ProductoService, private router:Router){}
 
   ngOnInit(): void {
     
@@ -33,11 +34,12 @@ export class RegistroProductoComponent implements OnInit {
     formData.append('idClasificacionProducto', this.producto.idClasificacion.toString());
     formData.append('imagen', this.imagen);
 
-    
-
     this.productoService.registro(formData).subscribe(
-      () => console.log('Producto registrado')
+      () => this.router.navigate([''])
     )
   }
 
+  guardarImagen(event:any):void{
+    this.imagen = event.target.files[0];
+  }
 }

@@ -11,6 +11,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { RegistroProductoComponent } from './components/registro-producto/registro-producto.component';
 import { ActualizarProductoComponent } from './components/actualizar-producto/actualizar-producto.component';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterLink
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]

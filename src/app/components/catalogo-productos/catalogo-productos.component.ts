@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Producto } from '../../model/producto';
 
 @Component({
   selector: 'app-catalogo-productos',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class CatalogoProductosComponent {
 
+  productos!:Producto[]
+
+  constructor(){}
+
+  ngOnInit():void{
+
+  }
+
+  
 }

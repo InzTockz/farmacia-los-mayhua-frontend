@@ -18,7 +18,11 @@ export class ProductoService {
 
   registro(producto:FormData):Observable<Producto>{
     return this.http.post<Producto>(
-      `${this.apiProducto}/registrar`, producto 
-    )
+      `${this.apiProducto}/registrar`, producto)
   }
+
+  eliminar(idProducto:number):Observable<void>{
+    return this.http.delete<void>(`${this.apiProducto}/deshabilitar/${idProducto}`)
+  }
+  
 }

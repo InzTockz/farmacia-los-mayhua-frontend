@@ -22,4 +22,13 @@ export class GestionProductosComponent implements OnInit{
       response => this.productos = response
     );
   }
+
+  eliminarProducto(idProducto:number):void{
+    this.productoService.eliminar(idProducto).subscribe(
+      () => {
+        console.log('Producto eliminado')
+        this.listado();
+      }
+    )
+  }
 }

@@ -1,37 +1,49 @@
-<div>
-    <form (ngSubmit)="registrarProducto()">
-    <div>
-        <label>Nombre del Producto</label>
-        <input name="nombreProducto" type="text" [(ngModel)]="producto.nombreProducto">
-    </div>
-    <div>
-        <label>Fecha de Fabricacion</label>
-        <input name="fechaFabricacion" type="date" [(ngModel)]="producto.fechaFabricacion">
-    </div>
-    <div>
-        <label>Fecha de Vencimiento</label>
-        <input name="fechaVencimiento" type="date" [(ngModel)]="producto.fechaVencimiento">
-    </div>
-    <div>
-        <label>Stock</label>
-        <input name="stock" type="number" [(ngModel)]="producto.stock">
-    </div>
-    <div>
-        <label>Precio</label>
-        <input name="precio" type="number" [(ngModel)]="producto.precio">
-    </div>
-    <div>
-        <label>Categoria</label>
-        <input name="idCategoria" type="number" [(ngModel)]="producto.idCategoria">
-    </div>
-    <div>
-        <label>Clasificacion del Producto</label>
-        <input name="idClasificacion" type="number" [(ngModel)]="producto.idClasificacion">
-    </div>
-    <div>
-        <label>Imagen</label>
-        <input name="imagen" type="file" [(ngModel)]="imagen">
-    </div>
-    <button >Registrar Producto</button>
+<div class="flex flex-row p-5 w-1/2">
+    <form (ngSubmit)="registrarProducto()" enctype="multipart/form-data">
+        <div class="flex flex-col gap-2 mb-3">
+            <label class="text-sm font-semibold">Nombre del Producto</label>
+            <input class="rounded-xl p-2 border border-black" name="nombreProducto" type="text"
+                [(ngModel)]="producto.nombreProducto">
+        </div>
+        <div class="flex flex-row gap-2 mb-3">
+            <div class="flex flex-col w-1/2 gap-2">
+                <label class="text-sm font-semibold">Fecha de Fabricacion</label>
+                <input class=" rounded-xl p-2 border border-black" name="fechaFabricacion" type="date" [(ngModel)]="producto.fechaFabricacion">
+            </div>
+            <div class="flex flex-col w-1/2 gap-2">
+                <label class="text-sm font-semibold">Fecha de Vencimiento</label>
+                <input class="rounded-xl p-2 border border-black" name="fechaVencimiento" type="date" [(ngModel)]="producto.fechaVencimiento">
+            </div>
+        </div>
+        <div class="flex flex-row mb-3 gap-2">
+            <div class="flex flex-col gap-2">
+                <label class="text-sm font-semibold">Stock</label>
+                <input class="rounded-xl p-2 border border-black" name="stock" type="number" [(ngModel)]="producto.stock">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label class="text-sm font-semibold">Precio</label>
+                <input class="rounded-xl p-2 border border-black" name="precio" type="number" [(ngModel)]="producto.precio">
+            </div>
+        </div>
+        <div class="flex flex-row mb-3 gap-2">
+            <div class="flex flex-col gap-2">
+                <label class="text-sm font-semibold">Categoria</label>
+                <input class="rounded-xl p-2 border border-black" name="idCategoria" type="number" [(ngModel)]="producto.idCategoria">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label class="text-sm font-semibold">Clasificacion del Producto</label>
+                <input class="rounded-xl p-2 border border-black" name="idClasificacion" type="number" [(ngModel)]="producto.idClasificacion">
+            </div>
+        </div>
+        <div class="flex flex-col mb-5 gap-2">
+            <label class="text-sm font-semibold">Imagen</label>
+            <input class="rounded-md border border-black" name="imagen" type="file" (change)="guardarImagen($event)">
+        </div>
+        <div class="flex flex-row gap-5 justify-center">
+            <a routerLink="/" class="inline-block hover:transform hover:scale-110 duration-300 pointer-events-auto rounded-xl p-2 bg-blue-600 text-white font-semibold">Regresar
+                al listado</a>
+            <button class="bg-green-600 hover:transform hover:scale-110 duration-300 rounded-xl p-2 font-semibold text-white border border-solid">Registrar
+                Producto</button>
+        </div>
     </form>
 </div>
