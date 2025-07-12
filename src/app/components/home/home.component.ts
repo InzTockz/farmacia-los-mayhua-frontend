@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   cambiarPestana:boolean = true;
+  selectRegistro:boolean = true;
+  selectTable:boolean = false;
+  selectUpdate:boolean = false;
 
   constructor(){}
 

@@ -6,10 +6,10 @@ import { HomeComponent } from './components/home/home.component';
 import { GestionProductosComponent } from './components/gestion-productos/gestion-productos.component';
 
 const routes: Routes = [
-  {path: '', component: GestionProductosComponent},
+  {path: '', component: HomeComponent},
   {path: 'registro', component: RegistroProductoComponent},
   {path: 'actualizar/:idProducto', component: ActualizarProductoComponent},
-  {path: 'home', component: HomeComponent}
+  //{path: 'home', component: HomeComponent}
 ];
 
 @NgModule({

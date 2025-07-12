@@ -2,9 +2,13 @@
     <div role="region" tabindex="-1" style="pointer-events: none;">
     </div>
     <div class="">
-        <div class="flex flex-row justify-center gap-3">
-            <a (click)="cambiarEstado(true)" class="pointer-events-auto rounded-xl bg-slate-200 p-2">VISTA DE PRODUCTOS</a>
-            <a (click)="cambiarEstado(false)" class="pointer-events-auto rounded-xl bg-slate-200 p-2">GESTION DE PRODUCTOS</a>
+        <div class="flex flex-row justify-center gap-5">
+            <a (click)="cambiarEstado(true)" [ngClass]="cambiarPestana!=false? 'bg-slate-800':''" class="
+            inline-block hover:transform hover:scale-105 duration-300 text-white font-semibold
+            cursor-pointer rounded-xl bg-slate-500 p-2">VISTA DE PRODUCTOS</a>
+            <a (click)="cambiarEstado(false)" [ngClass]="cambiarPestana!=true?'bg-slate-800':''" class="
+            inline-block hover:transform hover:scale-105 duration-300 text-white font-semibold
+            cursor-pointer rounded-xl bg-slate-500 p-2">GESTION DE PRODUCTOS</a>
         </div>
     </div>
     <div class="p-5">

@@ -8,5 +8,6 @@ export class Producto {
     presentacionImg!:string;
     estado!:boolean;
     idCategoria!:number;
+    nombreCategoria!:string;
     idClasificacionProducto!:number;
 }
