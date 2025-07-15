@@ -1,4 +1,7 @@
-<div class="flex flex-row p-5 w-1/2">
+<div class="flex flex-col p-5 justify-center items-center">
+    <div class="mt-7 mb-7">
+        <h1 class="text-3xl">Registrar Producto</h1>
+    </div>
     <form (ngSubmit)="registrarProducto()" enctype="multipart/form-data">
         <div class="flex flex-col gap-2 mb-3">
             <label class="text-sm font-semibold">Nombre del Producto</label>
@@ -40,7 +43,7 @@
             <input class="rounded-md border border-black" name="imagen" type="file" (change)="guardarImagen($event)">
         </div>
         <div class="flex flex-row gap-5 justify-center">
-            <a routerLink="/" class="inline-block hover:transform hover:scale-110 duration-300 pointer-events-auto rounded-xl p-2 bg-blue-600 text-white font-semibold">Regresar
+            <a routerLink="/gestion" class="inline-block hover:transform hover:scale-110 duration-300 pointer-events-auto rounded-xl p-2 bg-blue-600 text-white font-semibold">Regresar
                 al listado</a>
             <button class="bg-green-600 hover:transform hover:scale-110 duration-300 rounded-xl p-2 font-semibold text-white border border-solid">Registrar
                 Producto</button>

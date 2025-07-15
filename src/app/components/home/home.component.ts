@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,18 +8,5 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  cambiarPestana:boolean = true;
-  selectRegistro:boolean = true;
-  selectTable:boolean = false;
-  selectUpdate:boolean = false;
 
-  constructor(){}
-
-  ngOnInit():void{
-
-  }
-
-  cambiarEstado(estado:boolean):void{
-    this.cambiarPestana = estado;
-  }
 }

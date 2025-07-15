@@ -27,7 +27,7 @@ import { RouterLink } from '@angular/router';
     AppRoutingModule,
     CommonModule,
     FormsModule,
-    RouterLink
+    RouterLink,
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]
