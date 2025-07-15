@@ -12,6 +12,9 @@ import { RegistroProductoComponent } from './components/registro-producto/regist
 import { ActualizarProductoComponent } from './components/actualizar-producto/actualizar-producto.component';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { GestionUsuarioComponent } from './components/gestion-usuario/gestion-usuario.component';
+import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
+import { ActualizarUsuarioComponent } from './components/actualizar-usuario/actualizar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { RouterLink } from '@angular/router';
     CatalogoProductosComponent,
     GestionProductosComponent,
     RegistroProductoComponent,
-    ActualizarProductoComponent
+    ActualizarProductoComponent,
+    GestionUsuarioComponent,
+    RegistrarUsuarioComponent,
+    ActualizarUsuarioComponent
   ],
   imports: [
     BrowserModule,

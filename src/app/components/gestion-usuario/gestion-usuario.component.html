@@ -1,0 +1,36 @@
+<div class="flex flex-col mt-5">
+    <div>
+        <h1 class="text-3xl font-semibold text-center mb-10">Gestionar Usuarios</h1>
+    </div>
+
+    <div class="flex flex-col gap-2 p-3">
+        <div>
+            <button routerLink="/usuarios/registro"
+                class="rounded-xl bg-blue-500 p-2 text-white font-semibold hover:scale-105 hover:transition hover:duration-300 duration-300 ease-in-out">Registrar
+                Usuario</button>
+        </div>
+        <table class="border-separate border-spacing-0 border border-slate-500 w-full rounded-lg overflow-hidden">
+            <thead class="bg-gray-600 text-white">
+                <tr>
+                    <th class="border border-slate-700 ...">Nombres</th>
+                    <th class="border border-slate-700 ...">Correo</th>
+                    <th class="border border-slate-700 ...">Dni</th>
+                    <th class="border border-slate-700 ...">Acciones</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr *ngFor="let u of usuarios">
+                    <td class="border border-slate-700 ...">{{u.nombreUsuario}}</td>
+                    <td class="border border-slate-700 ...">{{u.correo}}</td>
+                    <td class="border border-slate-700 ...">{{u.dni}}</td>
+                    <td class="border border-slate-700 overflow-hidden p-2">
+                        <a [routerLink]="['/usuarios/actualizar', u.idUsuario]"
+                            class="inline-block mr-2 cursor-pointer bg-green-300 font-semibold rounded-full p-2 hover:scale-105 transition duration-300 ease-in-out ">Actualizar</a>
+                        <a class="inline-block cursor-pointer bg-red-500 text-white font-semibold rounded-full p-2 hover:scale-105 hover:transition hover:duration-300 duration-300 ease-in-out"
+                            (click)="eliminarUsuario(u.idUsuario)">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

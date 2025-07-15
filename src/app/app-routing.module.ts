@@ -6,13 +6,18 @@ import { HomeComponent } from './components/home/home.component';
 import { GestionProductosComponent } from './components/gestion-productos/gestion-productos.component';
 import { AppComponent } from './app.component';
 import { CatalogoProductosComponent } from './components/catalogo-productos/catalogo-productos.component';
+import { GestionUsuarioComponent } from './components/gestion-usuario/gestion-usuario.component';
+import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
+import { ActualizarUsuarioComponent } from './components/actualizar-usuario/actualizar-usuario.component';
 
 const routes: Routes = [
   {path: 'gestion', component: GestionProductosComponent},
   {path: 'gestion/registro', component: RegistroProductoComponent},
-  {path: 'actualizar/:idProducto', component: ActualizarProductoComponent},
-  {path: 'catalogo', component: CatalogoProductosComponent}
-  //{path: 'home', component: HomeComponent}
+  {path: 'gestion/actualizar/:idProducto', component: ActualizarProductoComponent},
+  {path: 'catalogo', component: CatalogoProductosComponent},
+  {path: 'usuarios', component: GestionUsuarioComponent},
+  {path: 'usuarios/registro', component: RegistrarUsuarioComponent},
+  {path: 'usuarios/actualizar/:idUsuario', component: ActualizarUsuarioComponent}
 ];
 
 @NgModule({
